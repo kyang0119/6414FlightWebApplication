@@ -1,0 +1,156 @@
+/* <!--Kuan Yang kxy200010 6414--> */
+.header {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    text-shadow: -2px 5px grey;
+    background-image: url("headerimg.jpg");
+    background-repeat: no-repeat;
+    height: 30%;
+
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    opacity: 0.85;
+    visibility: visible;
+    height: 50px;
+    /* // position: fixed; */
+    bottom: 0;
+    margin-top: auto;
+}
+
+
+.div {
+    position: static;
+}
+
+.topnav a:link {
+    color: black;
+    background-color: lightblue;
+    Float: left;
+    width: 17%;
+    padding: 20px;
+    text-align: center;
+    display: block;
+}
+
+
+.topnav a:visited {
+    color: green;
+}
+
+.topnav a:active {
+    color: blue;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    /* background-color: lightsalmon; */
+    color: black;
+}
+
+.column.middle a:link {
+    color: black;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    /*Let the element behave like a <table> element*/
+    clear: both;
+    /*The element is pushed below both left and right floated elements*/
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+    float: left;
+    /* so be in same row */
+}
+
+/* Middle column */
+.column.middle {
+    text-align: left;
+    width: 75%;
+    float: left;
+    /*so same line*/
+}
+
+.footer {
+    background-color: lightblue;
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+
+/* .column.middle {
+    background-image: url("flight2.jpeg");
+} */
+
+.column.middle table,
+th,
+td {
+    border-color: rgb(45, 152, 171);
+    border-style: dotted;
+    border-width: 2px;
+    vertical-align: bottom;
+    /*horizontal-align: left;*/
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+th,
+td {
+    text-align: left;
+}
+
+p {
+    font-size: medium;
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+input {
+    border: 2px solid;
+}
+
+.column.middle img {
+    float: right;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 100px;
+}
+
+#hotelSelectionForm {
+    display: none;
+}
+
+#rentalSelectionForm {
+    display: none;
+}
+
+/* tr:hover {
+    background-color: gray;
+    cursor: pointer;
+} */
+.cart {
+    float: right;
+    font-size: medium;
+    font-weight: bold;
+    color: black;
+}

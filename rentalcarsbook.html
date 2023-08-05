@@ -1,0 +1,142 @@
+<!--Kuan Yang kxy200010 6414-->
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Rental Cars Book</h1>
+        <p>Book your rental car with ease</p>
+    </div>
+
+    <div class="row">
+        <div class="topnav">
+            <a href="flights.html">Flights</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="rentalcarsbook.html">Rental Cars Book</a>
+            <a href="orderstatus.html">Order Status</a>
+            <a href="contact.html">Contact</a>
+            <a href="specialoffer.html"> Special Offer</a>
+            <a href="register.php"> Register</a>
+        </div>
+    </div>
+
+
+    <p id="rentalcarsbook time" onmouseover="showTime4()"> Put mouse here to see the current time! </p>
+
+    <div class="row">
+
+        <div class="column side">
+            <h4>Hottest Deals</h4>
+            <ol>
+                <li>
+                    <a href="">Avis Budget discounts</a>
+                </li>
+                <li>
+                    <a href="">enterprise discounts</a>
+                </li>
+                <li>
+                    <a href="">
+                        Herz Coupons & discounts
+                    </a>
+                </li>
+
+            </ol>
+            <div>
+                <a href="#" class="myCart" onclick="displayMyCart()"><b>My Cart</b></a>
+                <p class="myCartP1"></p>
+                <p class="myCartP2"></p>
+                <p class="myCartP3"></p>
+                <p class="myCartP4"></p>
+                <p class="myCartP5"></p>
+            </div>
+        </div>
+
+
+
+        <div class="column middle" id="rentalsColumnMiddle">
+            <div>
+                <h2>Book My Car</h2>
+                <form>
+                    <lable for="city">
+                        <strong>Name of the City</strong>
+                    </lable><br>
+                    <input type="text" id="city" value="Dallas" required> <br>
+                    <lable for="rentalCheckin">Check-in</lable><br>
+                    <input type="date" id="rentalCheckin" required onchange="earlyThanTodayError(this)"
+                        value="2023-09-20"><br>
+                    <lable for="rentalCheckout" value="checkout lable">Check-out</lable><br>
+                    <input type="date" id="rentalCheckout" required
+                        onchange="earlyThanTodayError(this);validateRentalCarDate()" value="2023-10-20"> <br>
+                    <!-- <a href="#" onclick="validateRentalCarDate()">Validate</a> -->
+                    <p id="validateRentalInfo"></p>
+
+
+                </form>
+            </div>
+
+            <div>
+                <button onclick=" showRentalSelectionForm()"> Search Rental</button>
+                <form id="rentalSelectionForm">
+                    <lable for="chooseRentalCar"> Choose a hotel:</lable>
+                    <select name="chooseRentalCar" id="chooseRentalCar">
+                        <option value="BMW">BMW</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Tesla">Tesla</option>
+                        <option value="Cadillac">Cadillac</option>
+                        <option value="Nissan">Nissan</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    </select><br>
+                    <a href="#" onclick="displayRentalCarInfo();searchRental()">Submit and See Search Result</a>
+
+                </form>
+            </div>
+
+
+
+            <p id="4444"></p>
+            <p id="5555"></p>
+
+
+        </div>
+
+
+
+        <!-- <div class="column side">
+      <h2>Side</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    </div> -->
+
+
+
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+        <p>Name:Kuan Yang ID:Kxy200010</p>
+    </div>
+    <script type="text/javascript" src="web.js">
+
+    </script>
+    <script type="text/javascript" src="myJquery.js"></script>
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            document.body.style.backgroundColor = window.localStorage.getItem('bgColor');
+
+        });
+
+    </script>
+</body>
+
+</html>

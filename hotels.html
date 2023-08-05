@@ -1,0 +1,126 @@
+<!--Kuan Yang kxy200010 6414-->
+<html>
+
+<head>
+    <title>
+        Hotel
+    </title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Hotels</h1>
+        <p><em>Book your hotel with ease</em></p>
+    </div>
+
+    <div class="row">
+        <div class="topnav">
+            <a href="flights.html">Flights</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="rentalcarsbook.html">Rental Cars Book</a>
+            <a href="orderstatus.html">Order Status</a>
+            <a href="contact.css">Contact</a>
+            <a href="specialoffer.html"> Special Offer</a>
+            <a href="register.php"> Register</a>
+
+        </div>
+    </div>
+    <p id="hotels time" onmouseover="showTime2()"> Put mouse here to see the current time! </p>
+
+    <div class="row">
+
+        <div class="column side">
+            <form>
+                <lable for="destin">
+                    <strong>Name of the City</strong>
+                </lable><br>
+                <input type="text" id="destin" value="Dallas" required> <br>
+                <lable for="checkin">Check-in</lable><br>
+                <input type="date" id="hotelCheckin" onchange="earlyThanTodayError(this)" value="2023-09-20"><br>
+                <lable for="checkout">Check-out</lable><br>
+                <input type="date" id="hotelCheckout" onchange="earlyThanTodayError(this);validateHotelDate()"
+                    value="2023-12-30">
+                <br>
+                <!-- <a href="#" onclick="validateHotelDate()">Validate</a><br> -->
+                <span id="validateHotelInfo"></span>
+            </form>
+
+            <div>
+                <button onclick="showHotelSelectionForm()"> Search Hotel</button>
+                <form id="hotelSelectionForm">
+                    <lable for="chooseHotel"> choose hotel:</lable>
+                    <select name="chooseHotel" id="chooseHotel">
+                        <option value="Hilton Garden Inn">Hilton Garden Inn</option>
+                        <option value="Holiday Inn">Holiday Inn</option>
+                        <option value="Marriott">Marriott</option>
+                        <option value="Ritz-Carlton">Ritz-Carlton</option>
+                        <option value="Hyatt">Hyatt</option>
+
+                    </select><br>
+                    <a href="#" onclick="displayHotelInfo();searchHotel()">Submit and see research result</a>
+                </form>
+                <p id="5555"></p>
+            </div>
+
+            <div>
+                <a href="#" class="myCart" onclick="displayMyCart()"><b>My Cart</b></a>
+                <p class="myCartP1"></p>
+                <p class="myCartP2"></p>
+                <p class="myCartP3"></p>
+                <p class="myCartP4"></p>
+                <p class="myCartP5"></p>
+            </div>
+        </div>
+
+
+
+        <div class=" column middle" id="hotelsColumnMiddle">
+
+
+            <!-- <h3 class="hotelMiddleText">
+                Check out the rewards table below:
+            </h3> -->
+
+            <!-- <img src=" points.jpeg" alt="points" /> -->
+
+
+        </div>
+
+
+
+        <!-- <div class="column side">
+      <h2>Side</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    </div> -->
+
+
+
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+        <p>Name: Kuan Yang ID:Kxy200010</p>
+    </div>
+    <script type="text/javascript" src="web.js">
+
+
+    </script>
+    <script type="text/javascript" src="myJquery.js"></script>
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            document.body.style.backgroundColor = window.localStorage.getItem('bgColor');
+
+        });
+
+    </script>
+</body>
+
+</html>

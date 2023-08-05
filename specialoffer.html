@@ -1,0 +1,149 @@
+<!--Kuan Yang kxy200010 6414-->
+<html>
+
+<head>
+    <title>
+        Special Offer
+    </title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script type="text/JavaScript" src="web.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Special Offer</h1>
+        <p><em>Find Special Offer with ease</em></p>
+    </div>
+
+    <div class="row">
+        <div class="topnav">
+            <a href="flights.html">Flights</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="rentalcarsbook.html">Rental Cars Book</a>
+            <a href="orderstatus.html">Order Status</a>
+            <a href="contact.html">Contact</a>
+            <a href="specialoffer.html"> Special Offer</a>
+            <a href="register.php"> Register</a>
+        </div>
+    </div>
+
+    <p id="flights time" onmouseover="showTime1()"> Put mouse here to see the current time! </p>
+
+    <div class="row" id=>
+
+        <div class="column side">
+            <button onclick=offerIncreaseFontSize()>
+                <h3>Increase text size</h3>
+            </button> <br>
+            <button onclick=offerDecreaseFontSize()>
+                <h3>Decrease text size</h3>
+            </button> <br>
+            <button onclick="changeBackgroundColor()">
+                <h3>Change Background Color</h3>
+            </button><br>
+            <div>
+                <a href="#" class="myCart" onclick="displayMyCart()"><b>My Cart</b></a>
+                <p class="myCartP1"></p>
+                <p class="myCartP2"></p>
+                <p class="myCartP3"></p>
+                <p class="myCartP4"></p>
+                <p class="myCartP5"></p>
+            </div>
+
+        </div>
+
+
+
+        <div class="specialOffer column middle">
+            <button id="checkDeal" onclick="NextBack('one')" onmouseover="calculateTime() ">
+                <h4>Special Offer<h4>
+            </button>
+
+
+
+            <div id="one" class="question">
+                <span>1. Have you flown on at least 10 flights in the past year?</span><br>
+                <input type="radio" id="Q1yes" name="firstQues" value="yes"> Yes
+                <input type="radio" id="Q1no" name="firstQues" value="no">No
+
+                <div>
+                    <a href="#" onclick="NextBack('four')" class="back">Back</a>
+                    <a href="#" onclick="NextBack('two')" class="next">Next</a>
+                    <a href="#" onclick="NextBack('two')" class="skip">Skip</a>
+
+                </div>
+            </div>
+
+            <div id="two" class="question">
+                <span>2. Are you a Gold member ?</span><br>
+                <input type="radio" id="Q2yes" name="secondQues" value="yes">Yes
+                <input type="radio" id="Q2no" name="secondQues" value="no">No
+
+                <div>
+                    <a href="#" onclick="NextBack('one')" class="back">Back</a>
+                    <a href="#" onclick="NextBack('three')" class="next">Next</a>
+                    <a href="#" onclick="NextBack('three')" class="skip">Skip</a>
+                </div>
+            </div>
+
+            <div id="three" class="question">
+                <span>3. Are you flying with more than 1 person?</span> <br>
+                <input type="radio" id="Q3yes" name="thirdQues" value="yes">Yes
+                <input type="radio" id="Q3no" name="thirdQues" value="no">No
+
+                <div>
+                    <a href="#" onclick="NextBack('two')" class="back">Back</a>
+                    <input type="submit" id="finishQues" value="submit" onclick="displayRadioValue()">
+                    <!-- write a submit function to display
+                        information -->
+                </div>
+            </div>
+            <div>
+                <p id="result"></p>
+                <p id="offer"> </p>
+                <p id="totalTime"></p>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- <div class="column side">
+      <h2>Side</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    </div> -->
+
+
+
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+        <p>Name:Kuan Yang ID:Kxy200010</p>
+    </div>
+    <script type="text/javascript" src="web.js">
+
+    </script>
+    <script type="text/javascript" src="myJquery.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            if (window.localStorage.getItem('bgColor')) {
+                document.body.style.backgroundColor = window.localStorage.getItem('bgColor');
+            }
+
+        });
+
+    </script>
+    </script>
+
+</body>
+
+</html>
